@@ -114,7 +114,7 @@ async def pm_text(bot, message):
         reply_msg = await bot.send_message(message.from_user.id, f"<b><i>Searching For {content} 🔍</i></b>", reply_to_message_id=message.id)
         await auto_filter(bot, content, message, reply_msg, ai_search)
     else:
-        await message.reply_text(text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/vj_bots>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]]))
+        await message.reply_text(text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/ROCKERSBACKUP>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]]))
         await bot.send_message(chat_id=LOG_CHANNEL, text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>")
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -151,7 +151,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -371,7 +371,7 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -515,7 +515,7 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -661,7 +661,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -836,7 +836,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -966,7 +966,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -975,7 +975,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}",
+                    text=f"{' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
@@ -1891,7 +1891,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
-            xo = await query.message.reply_text(f'🔐')
+            xo = await query.message.reply_text(f'🍿')
             await asyncio.sleep(1)
             await xo.delete()
 
@@ -2732,7 +2732,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -2816,14 +2816,14 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         if not settings["button"]:
             cap+="<strong>\n\n<u>🍿 Your Movie Files 👇</u></strong>\n"
             for file in files:
-                cap += f"<strong>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></strong>"
+                cap += f"<strong>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></strong>"
     else:
         if settings["button"]:
             cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person:- {message.from_user.mention}\n\n</strong>"
         else:
             cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person:- {message.from_user.mention}\n\n</strong>"
             for file in files:
-                cap += f"<strong>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></strong>"
+                cap += f"<strong>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></strong>"
 
     if imdb and imdb.get('poster'):
         try:
