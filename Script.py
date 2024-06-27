@@ -6,8 +6,12 @@
 class script(object):
     START_TXT = """<strong><blockquote>Hᴇʟʟᴏ {}, ᴍʏ ɴᴀᴍᴇ <a href=https://t.me/{}>{}</a></blockquote>
     
- i am autofilter bot with shortnet support i have all type movie file
- u can also add ur using shartner and earn money 
+ i am autofilter bot i have all type movie file
+
+ u can also add ur shortner in this bot 
+ 
+ https://t.me/Theater_Print_Movies_Search_bot
+ https://t.me/Theater_Print_Movies_Search_bot
  
  formate :- /shortlink websitlink website api
  
