@@ -2831,12 +2831,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             await reply_msg.delete()
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(80)
                     await hehe.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(80)
                 await hehe.delete()
                 await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
@@ -2846,12 +2846,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             await reply_msg.delete()
             try:
                if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(80)
                     await hmm.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(80)
                 await hmm.delete()
                 await message.delete()
         except Exception as e:
@@ -2859,12 +2859,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             fek = await reply_msg.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(300)
+                    await asyncio.sleep(80)
                     await fek.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(300)
+                await asyncio.sleep(80)
                 await fek.delete()
                 await message.delete()
     else:
@@ -2872,12 +2872,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(300)
+                await asyncio.sleep(80)
                 await fuk.delete()
                 await message.delete()
         except KeyError:
             await save_group_settings(message.chat.id, 'auto_delete', True)
-            await asyncio.sleep(300)
+            await asyncio.sleep(80)
             await fuk.delete()
             await message.delete()
 
@@ -2960,14 +2960,14 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         )
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(80)
                 await spell_check_del.delete()
         except KeyError:
             grpid = await active_connection(str(msg.from_user.id))
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(msg.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(60)
                 await spell_check_del.delete()
 
 async def manual_filters(client, message, text=False):
