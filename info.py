@@ -101,7 +101,7 @@ VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '766185149277
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/How_to_open_link_rockersbot')
 
 # Shortlink Info
-SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
+SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
 SHORTLINK_API = environ.get('SHORTLINK_API', '43fb16ff834e0026f99fe1083b70d768b631802b')
 
