@@ -68,7 +68,7 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'kingvj01') # owner username with
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+VJzhxoD6GD9kNmQ1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/ROCKERSBACKUP')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_To_Open_Linkl')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_open_link_rockersbot')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'vj_bot_disscussion') # Support Chat Link Without https:// or @
 
 # True Or False
@@ -91,19 +91,19 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 # Token Verification Info :
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
-VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'Mdisk.pro')
-VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '766185149277536bd3b9bbf1ccc75cb97a411729')
+VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'zipshort.net')
+VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '43fb16ff834e0026f99fe1083b70d768b631802b')
 # if verify second shortner is True then fill below url and api
 VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', 'Mdisk.pro')
 VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '766185149277536bd3b9bbf1ccc75cb97a411729')
-VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/How_To_Open_Linkl')
+VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/How_to_open_link_rockersbot')
 
 # Shortlink Info
-SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Mdisk.pro')
-SHORTLINK_API = environ.get('SHORTLINK_API', '766185149277536bd3b9bbf1ccc75cb97a411729')
+SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', '43fb16ff834e0026f99fe1083b70d768b631802b')
 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
