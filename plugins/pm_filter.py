@@ -56,7 +56,7 @@ async def give_filter(client, message):
             try:
                 if settings['auto_ffilter']:
                     ai_search = True
-                    reply_msg = await message.reply_text(f"<b><i>Searching For {message.text} 🔍</i></b>")
+                    reply_msg = await message.reply_text(f"<b><i>Searching For...🔍</i></b>")
                     await auto_filter(client, message.text, message, reply_msg, ai_search)
             except KeyError:
                 grpid = await active_connection(str(message.from_user.id))
@@ -64,7 +64,7 @@ async def give_filter(client, message):
                 settings = await get_settings(message.chat.id)
                 if settings['auto_ffilter']:
                     ai_search = True
-                    reply_msg = await message.reply_text(f"<b><i>Searching For {message.text} 🔍</i></b>")
+                    reply_msg = await message.reply_text(f"<b><i>Searching For.....🔍</i></b>")
                     await auto_filter(client, message.text, message, reply_msg, ai_search)
     else: #a better logic to avoid repeated lines of code in auto_filter function
         search = message.text
@@ -2819,9 +2819,9 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                 cap += f"<strong>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></strong>"
     else:
         if settings["button"]:
-            cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person:- {message.from_user.mention}\n\n</strong>"
+            cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person :- {message.from_user.mention}\n\n</strong>"
         else:
-            cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person:- {message.from_user.mention}\n\n</strong>"
+            cap = f"<strong>🍿 Requisted Movie :- {search}\n👥 Requisted Person :- {message.from_user.mention}\n\n</strong>"
             for file in files:
                 cap += f"<strong>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></strong>"
 
@@ -2897,7 +2897,14 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("ɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠\nᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠\nᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠\nᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : Uncharted\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=1),
+        ],[
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+            InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+        ],[
+            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2909,7 +2916,14 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("ɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠\nᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠\nᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠\nᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : Uncharted\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=1),
+        ],[
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+            InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+        ],[
+            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2935,7 +2949,14 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
                 break
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("ɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠\nᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠\nᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠\nᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : Uncharted\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=1),
+        ],[
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+            InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+        ],[
+            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
