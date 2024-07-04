@@ -1020,17 +1020,6 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
         ])
         
-        else:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
-                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ]
-            )
-            btn.insert(0, [
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
-            ])
                 
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
