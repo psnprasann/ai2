@@ -2947,6 +2947,8 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     if AI_SPELL_CHECK == True and vj_search == True:
         vj_search_new = False
         vj_ai_msg = await reply_msg.edit_text("<b>Advance Ai Try To Find Your Movie With Your Wrong Spelling.</b>")
+        await asyncio.sleep(10)
+        await vj_ai_msg.delete()
         movienamelist = []
         movienamelist += [movie.get('title') for movie in movies]
         for techvj in movienamelist:
@@ -2975,13 +2977,16 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         await k.delete()
         return
     else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=movie_name.strip(),
-                    callback_data=f"spol#{reqstr1}#{k}",
-                )
-            ]
+        btn = [[[
+                InlineKeyboardButton("ɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠\nᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠\nᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠\nᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : Uncharted\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)", show_alert=1),
+        ],[
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+            InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+        ],[
+            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
+            ]]
             for k, movie_name in enumerate(movielist)
         ]
         btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
