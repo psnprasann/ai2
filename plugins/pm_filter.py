@@ -1,3 +1,4 @@
+
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
@@ -56,7 +57,7 @@ async def give_filter(client, message):
             try:
                 if settings['auto_ffilter']:
                     ai_search = True
-                    reply_msg = await message.reply_text(f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>")
+                    reply_msg = await message.reply_text(f"<b><i>Searching For {message.text} 🔍</i></b>")
                     await auto_filter(client, message.text, message, reply_msg, ai_search)
             except KeyError:
                 grpid = await active_connection(str(message.from_user.id))
@@ -64,7 +65,7 @@ async def give_filter(client, message):
                 settings = await get_settings(message.chat.id)
                 if settings['auto_ffilter']:
                     ai_search = True
-                    reply_msg = await message.reply_text(f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>")
+                    reply_msg = await message.reply_text(f"<b><i>Searching For {message.text} 🔍</i></b>")
                     await auto_filter(client, message.text, message, reply_msg, ai_search)
     else: #a better logic to avoid repeated lines of code in auto_filter function
         search = message.text
@@ -90,7 +91,7 @@ async def pm_text(bot, message):
                 if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
                 if PM_SEARCH == True:
                     ai_search = True
-                    reply_msg = await bot.send_message(message.from_user.id, f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>", reply_to_message_id=message.id)
+                    reply_msg = await bot.send_message(message.from_user.id, f"<b><i>Searching For {content} 🔍</i></b>", reply_to_message_id=message.id)
                     await auto_filter(bot, content, message, reply_msg, ai_search)
                 else:
                     await message.reply_text(text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/vj_bots>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]]))
@@ -111,10 +112,10 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if PM_SEARCH == True:
         ai_search = True
-        reply_msg = await bot.send_message(message.from_user.id, f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>", reply_to_message_id=message.id)
+        reply_msg = await bot.send_message(message.from_user.id, f"<b><i>Searching For {content} 🔍</i></b>", reply_to_message_id=message.id)
         await auto_filter(bot, content, message, reply_msg, ai_search)
     else:
-        await message.reply_text(text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/ROCKERSBACKUP>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]]))
+        await message.reply_text(text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/vj_bots>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]]))
         await bot.send_message(chat_id=LOG_CHANNEL, text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>")
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -151,7 +152,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -159,26 +160,30 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     try:
         if settings['max_btn']:
             if 0 < offset <= 10:
@@ -284,7 +289,7 @@ async def advantage_spoll_choker(bot, query):
             if files:
                 k = (movie, files, offset, total_results)
                 ai_search = True
-                reply_msg = await query.message.edit_text(f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>")
+                reply_msg = await query.message.edit_text(f"<b><i>Searching For {movie} 🔍</i></b>")
                 await auto_filter(bot, movie, query, reply_msg, ai_search, k)
             else:
                 reqstr1 = query.from_user.id if query.from_user else 0
@@ -375,33 +380,37 @@ async def filter_yearss_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
 
     if offset != "":
         try:
@@ -523,33 +532,37 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
 
     if offset != "":
         try:
@@ -625,7 +638,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                text="🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠  🔊", callback_data="ident"
+                text="👇 𝖲𝖾𝗅𝖾𝖼𝗍 𝖸𝗈𝗎𝗋 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾𝗌 👇", callback_data="ident"
             )
         ],
     )
@@ -673,33 +686,37 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
 
     if offset != "":
         try:
@@ -775,7 +792,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                text="🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠  🔊", callback_data="ident"
+                text="👇 𝖲𝖾𝗅𝖾𝖼𝗍 Season 👇", callback_data="ident"
             )
         ],
     )
@@ -852,33 +869,37 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
         
     offset = 0
 
@@ -986,7 +1007,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"⚜️[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -995,7 +1016,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}",
+                    text=f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
@@ -1010,39 +1031,45 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
-            ]
+                    InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                    InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                ]
             )
+            btn.insert(0, [
+                InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+            ])
 
         else:
             btn.insert(0, 
                 [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
-            ]
+                    InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                    InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                    InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                ]
             )
+            btn.insert(0, [
+                InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+            ])
                 
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
 
     if offset != "":
         try:
@@ -1838,7 +1865,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+-0ef2Evj-wY5N2Y9")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+KzbVzahVdqQ3MmM1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1863,7 +1890,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+-0ef2Evj-wY5N2Y9")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/vj_bots")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1917,7 +1944,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
-            xo = await query.message.reply_text(f'🍿')
+            xo = await query.message.reply_text(f'🔐')
             await asyncio.sleep(1)
             await xo.delete()
 
@@ -2291,7 +2318,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "shortlink_info":
             btn = [[
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠  🔊", callback_data="laninfo")
+                InlineKeyboardButton("👇Select Your Language 👇", callback_data="laninfo")
         ], [
             InlineKeyboardButton("Tamil", callback_data="tamil_info"),
             InlineKeyboardButton("English", callback_data="english_info"),
@@ -2321,7 +2348,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tele":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVJ01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2362,7 +2389,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "share":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2378,7 +2405,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "song":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2419,7 +2446,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sticker":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="help"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2435,7 +2462,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tamil_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2451,7 +2478,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "english_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2467,7 +2494,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "hindi_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2483,7 +2510,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "telugu_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2499,7 +2526,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "malayalam_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2515,7 +2542,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "urdu_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2531,7 +2558,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "bangladesh_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
 
             await client.edit_message_media(
@@ -2548,7 +2575,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "kannada_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2564,7 +2591,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "gujarati_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/alonekingjnanesh")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/KingVj01")
                   ]]
         
             await client.edit_message_media(
@@ -2730,7 +2757,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                     continue
                 else:
                     search = search + x + " "
-            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|predvd|new|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|bro|bruh|broh|helo|that|find|dubbed|link|venum|iruka|pannunga|pannungga|anuppunga|anupunga|anuppungga|anupungga|film|undo|kitti|kitty|tharu|kittumo|kittum|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
+            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|bro|bruh|broh|helo|that|find|dubbed|link|venum|iruka|pannunga|pannungga|anuppunga|anupunga|anuppungga|anupungga|film|undo|kitti|kitty|tharu|kittumo|kittum|movie|any(one)|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
             search = re.sub(r"\s+", " ", search).strip()
             search = search.replace("-", " ")
             search = search.replace(":", "")
@@ -2758,33 +2785,37 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('t.me') and not x.startswith('.') and not x.startswith(',') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f"http://t.me/{temp.U_NAME}?startgroup=true"),
-                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
-                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞",  url=f"https://t.me/+P-wgbt_2dlU3MTM1"),
-            ][
-                
-                InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
+                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
+                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
+                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        btn.insert(0, [
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+            InlineKeyboardButton("ʏᴇᴀʀs", callback_data=f"years#{key}")
+        ])
     if offset != "":
         req = message.from_user.id if message.from_user else 0
         try:
@@ -2844,16 +2875,17 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         )
         temp.IMDB_CAP[message.from_user.id] = cap
         if not settings["button"]:
-            cap+="<strong>\n\n<u>🍿 Your Movie Files 👇</u></strong>\n"
+            cap+="<b>\n\n<u>🍿 Your Movie Files 👇</u></b>\n"
             for file in files:
-                cap += f"<strong>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></strong>"
+                cap += f"<b>\n📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n</a></b>"
     else:
         if settings["button"]:
-            cap = f"<strong>📪 𝐑𝐞𝐪𝐮𝐢𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 ═❰ {search}\n🪬 𝐑𝐞𝐪𝐮𝐢𝐬𝐭𝐞𝐝 𝐏𝐞𝐫𝐬𝐨𝐧 ═❰ {message.from_user.mention}\n🔋 𝐌𝐨𝐯𝐢𝐞 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐒𝐩𝐞𝐞𝐝 ═❰ {remaining_seconds} sᴇᴄᴏɴᴅs\n\n🍁 𝐉𝐨𝐢𝐧 𝐁𝐚𝐜𝐤𝐮𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ═❰ @ROCKERSBACKUP @ROCKERS_ADULT</strong>"
+            cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
         else:
-            cap = f"<strong>📪 𝐑𝐞𝐪𝐮𝐢𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞 ═❰ {search}\n🪬 𝐑𝐞𝐪𝐮𝐢𝐬𝐭𝐞𝐝 𝐏𝐞𝐫𝐬𝐨𝐧 ═❰ {message.from_user.mention}\n🔋 𝐌𝐨𝐯𝐢𝐞 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐒𝐩𝐞𝐞𝐝 ═❰ {remaining_seconds} sᴇᴄᴏɴᴅs\n\n🍁 𝐉𝐨𝐢𝐧 𝐁𝐚𝐜𝐤𝐮𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ═❰ @ROCKERSBACKUP @ROCKERS_ADULT</strong>"
+            cap = f"<b>Tʜᴇ Rᴇꜱᴜʟᴛꜱ Fᴏʀ ☞ {search}\n\nRᴇǫᴜᴇsᴛᴇᴅ Bʏ ☞ {message.from_user.mention}\n\nʀᴇsᴜʟᴛ sʜᴏᴡ ɪɴ ☞ {remaining_seconds} sᴇᴄᴏɴᴅs\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ☞ : {message.chat.title} \n\n⚠️ ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️\n\n</b>"
+            cap+="<b><u>🍿 Your Movie Files 👇</u></b>\n\n"
             for file in files:
-                cap += f"<strong>📁<a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@ViewCinemas') and not x.startswith('@') and not x.startswith('@Rocky_links') and not x.startswith('@Horror_Box') and not x.startswith('@AAflix') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></strong>"
+                cap += f"<b>📁 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     if imdb and imdb.get('poster'):
         try:
@@ -2861,12 +2893,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             await reply_msg.delete()
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(80)
+                    await asyncio.sleep(300)
                     await hehe.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(80)
+                await asyncio.sleep(300)
                 await hehe.delete()
                 await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
@@ -2876,12 +2908,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             await reply_msg.delete()
             try:
                if settings['auto_delete']:
-                    await asyncio.sleep(80)
+                    await asyncio.sleep(300)
                     await hmm.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(80)
+                await asyncio.sleep(300)
                 await hmm.delete()
                 await message.delete()
         except Exception as e:
@@ -2889,12 +2921,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
             fek = await reply_msg.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(80)
+                    await asyncio.sleep(300)
                     await fek.delete()
                     await message.delete()
             except KeyError:
                 await save_group_settings(message.chat.id, 'auto_delete', True)
-                await asyncio.sleep(80)
+                await asyncio.sleep(300)
                 await fek.delete()
                 await message.delete()
     else:
@@ -2902,12 +2934,12 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
         
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(80)
+                await asyncio.sleep(300)
                 await fuk.delete()
                 await message.delete()
         except KeyError:
             await save_group_settings(message.chat.id, 'auto_delete', True)
-            await asyncio.sleep(80)
+            await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
 
@@ -2918,7 +2950,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     reqstr = await client.get_users(reqstr1)
     settings = await get_settings(msg.chat.id)
     query = re.sub(
-        r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
+        r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
         "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
     query = query.strip() + " movie"
     try:
@@ -2927,24 +2959,24 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await reply_msg.edit_text(text=script.I_CUDNT.format(mv_rqst), reply_markup=InlineKeyboardMarkup(button))
-        await asyncio.sleep(20)
+        await asyncio.sleep(30)
         await k.delete()
         return
     movielist = []
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await reply_msg.edit_text(text=script.I_CUDNT.format(mv_rqst), reply_markup=InlineKeyboardMarkup(button))
-        await asyncio.sleep(20)
+        await asyncio.sleep(30)
         await k.delete()
         return
     movielist += [movie.get('title') for movie in movies]
@@ -2952,7 +2984,7 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
     SPELL_CHECK[mv_id] = movielist
     if AI_SPELL_CHECK == True and vj_search == True:
         vj_search_new = False
-        vj_ai_msg = await reply_msg.edit_text("<b>Advance Ai Try To Find Your Movie With Your Wrong Spelling.</b>")
+        vj_ai_msg = await reply_msg.edit_text("<b><i>Advance Ai Try To Find Your Movie With Your Wrong Spelling.</i></b>")
         movienamelist = []
         movienamelist += [movie.get('title') for movie in movies]
         for techvj in movienamelist:
@@ -2965,12 +2997,12 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
                 break
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-            InlineKeyboardButton("❕ 𝐂𝐡𝐞𝐜𝐤 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐢𝐧 (𝐆𝐎𝐎𝐆𝐋𝐄) ❕", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await reply_msg.edit_text(text=script.I_CUDNT.format(mv_rqst), reply_markup=InlineKeyboardMarkup(button))
-        await asyncio.sleep(10)
+        await asyncio.sleep(30)
         await k.delete()
         return
     else:
@@ -2990,14 +3022,14 @@ async def advantage_spell_chok(client, name, msg, reply_msg, vj_search):
         )
         try:
             if settings['auto_delete']:
-                await asyncio.sleep(10)
+                await asyncio.sleep(600)
                 await spell_check_del.delete()
         except KeyError:
             grpid = await active_connection(str(msg.from_user.id))
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(msg.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(10)
+                await asyncio.sleep(600)
                 await spell_check_del.delete()
 
 async def manual_filters(client, message, text=False):
