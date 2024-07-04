@@ -1019,6 +1019,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn.insert(0, [
             InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"languages#{key}"),
         ])
+        
         else:
             btn.insert(0, 
                 [
