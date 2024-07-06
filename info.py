@@ -93,8 +93,8 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Token Verification Info :
 VERIFY = bool(environ.get('VERIFY', True))
 VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
-VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'earn2short.in')
-VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', 'c6416b312ff7ab400fb36614e61add83d51a0464')
+VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'zipshort.net')
+VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '43fb16ff834e0026f99fe1083b70d768b631802b')
 # if verify second shortner is True then fill below url and api
 VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', 'zipshort.net')
 VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '43fb16ff834e0026f99fe1083b70d768b631802b')
