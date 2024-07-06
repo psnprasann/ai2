@@ -70,14 +70,14 @@ async def start(client, message):
             return
         btn = [
             [
-            InlineKeyboardButton("❆ Jᴏɪɴ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+nlo1GNVDGIczZWE9"),
-            InlineKeyboardButton("❆ Jᴏɪɴ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+ZE14MSI_yNw1YjJl"),
-            ],[
-            InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+5UEeo65qHKowOTRl"),
-            InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+jsgiQjjiyjQ0MTI1"),
+            InlineKeyboardButton("❆ Jᴏɪɴ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+5UEeo65qHKowOTRl"),
+            InlineKeyboardButton("❆ Jᴏɪɴ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+jsgiQjjiyjQ0MTI1"),
             ],[
             InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+uAi8M0m7oE04YmY1"),
             InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+Fs7Wt1CbDVszYjc1"),
+            ],[
+            InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+nlo1GNVDGIczZWE9"),
+            InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+ZE14MSI_yNw1YjJl"),
             ],[
             InlineKeyboardButton("❆ Jᴏɪɴ  Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link),
         ]]
@@ -250,22 +250,22 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(button)
                 )
                 filesarr.append(msg)
-                k = await client.send_message(chat_id = message.from_user.id, text=f"<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></strong>")
+                k = await client.send_message(chat_id = message.from_user.id, text=f"<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there @ROCKERSBACKUP</i></strong>")
                 await asyncio.sleep(600)
                 for x in filesarr:
                     await x.delete()
-                await k.edit_text("<strong>⚠️Your All Files/Videos is successfully deleted⚠️</strong>")
+                await k.edit_text("<strong>⚠️Your All Files/Videos is successfully deleted⚠️ @ROCKERSBACKUP</strong>")
             
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
             await asyncio.sleep(1) 
         await sts.delete()
-        k = await client.send_message(chat_id = message.from_user.id, text=f"<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></strong>")
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there @ROCKERSBACKUP</i></strong>")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_text("<strong>⚠️Your All Files/Videos is successfully deleted⚠️</strong>")       
+        await k.edit_text("<strong>⚠️Your All Files/Videos is successfully deleted⚠️ @ROCKERSBACKUP</strong>")       
         
         return
     
@@ -350,7 +350,7 @@ async def start(client, message):
             )
         )
         await asyncio.sleep(300)
-        await k.edit("<b>⚠️Your message is successfully deleted⚠️</b>")
+        await k.edit("<b>⚠️Your message is successfully deleted⚠️ @ROCKERSBACKUP</b>")
         return
         
     
@@ -372,7 +372,7 @@ async def start(client, message):
             )
         )
         await asyncio.sleep(1200)
-        await k.edit("<b>⚠️Your message is successfully deleted⚠️</b>")
+        await k.edit("<b>⚠️Your message is successfully deleted⚠️ @ROCKERSBACKUP</b>")
         return
         
     elif data.startswith("all"):
@@ -403,7 +403,7 @@ async def start(client, message):
                         InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
                     ]]
                     await message.reply_text(
-                        text="<b>⚠️ You are not verified !\nKindly verify to continue ⚠️</b>",
+                        text="<b>🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇</b>",
                         protect_content=True,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -428,7 +428,7 @@ async def start(client, message):
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_text("<b>⚠️ Your All Files/Videos is successfully deleted ⚠️</b>")
+        await k.edit_text("<b>⚠️ Your All Files/Videos is successfully deleted ⚠️ @ROCKERSBACKUP</b>")
         return    
         
     elif data.startswith("files"):
@@ -453,7 +453,7 @@ async def start(client, message):
                 )
             )
             await asyncio.sleep(1200)
-            await k.edit("<b>⚠️Your message is successfully deleted ⚠️</b>")
+            await k.edit("<b>⚠️Your message is successfully deleted ⚠️ @ROCKERSBACKUP</b>")
             return
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
@@ -468,7 +468,7 @@ async def start(client, message):
                         InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
                     ]]
                     await message.reply_text(
-                        text="<b>You are not verified !\nKindly verify to continue !</b>",
+                        text="<b>🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇</b>",
                         protect_content=True,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -532,7 +532,7 @@ async def start(client, message):
                 InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
             ]]
             await message.reply_text(
-                text="<b>You are not verified !\nKindly verify to continue !</b>",
+                text="<b>🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇</b>",
                 protect_content=True,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
@@ -555,7 +555,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply("<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></strong>",quote=True)
+    k = await msg.reply("<strong>⚠️IMPORTANT⚠️\n\nThis Movie Files/Videos will be deleted in 10 mins\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there @ROCKERSBACKUP</i></strong>",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>Your File/Video is successfully deleted!!!\n\nClick below button to get your deleted file 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -1131,7 +1131,7 @@ async def shortlink(bot, message):
         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /shortlink ""{your_shortener_website_name} {your_shortener_api}\n\nThat's it!!! Enjoy Earning Money 💲\n\nIf you have any Doubts, Feel Free to Ask me - @alonekingjnanesh</b>")
+        return await message.reply_text(f"<b>Hey {message.from_user.mention}, U CAN ADD THIS BOT https://t.me/Theater_Print_Movies_Search_bot IN YOUR GROUP THEN ADD UR SHORTNER")
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         grpid = message.chat.id
         title = message.chat.title
