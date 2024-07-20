@@ -89,7 +89,7 @@ async def pm_text(bot, message):
             link = get_link(content)
             if not link:
                 if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-                if PM_SEARCH == True:
+                if PM_SEARCH == False:
                     ai_search = True
                     reply_msg = await bot.send_message(message.from_user.id, f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>", reply_to_message_id=message.id)
                     await auto_filter(bot, content, message, reply_msg, ai_search)
@@ -112,7 +112,7 @@ async def pm_text(bot, message):
         await db.set_save(user_id, save=False)
         return 
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    if PM_SEARCH == True:
+    if PM_SEARCH == False:
         ai_search = True
         reply_msg = await bot.send_message(message.from_user.id, f"<b>𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐅𝐨𝐫 𝐅𝐢𝐥𝐞....📂</b>", reply_to_message_id=message.id)
         await auto_filter(bot, content, message, reply_msg, ai_search)
